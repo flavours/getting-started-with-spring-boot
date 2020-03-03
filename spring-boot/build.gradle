@@ -37,3 +37,8 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+task getDeps(type: Exec) {
+    configurations.testRuntime.files
+    commandLine 'echo', 'Downloaded all dependencies'
+}
