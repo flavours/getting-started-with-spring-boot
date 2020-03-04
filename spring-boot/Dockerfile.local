@@ -1,4 +1,7 @@
 FROM adoptopenjdk:11.0.6_10-jdk-hotspot
-WORKDIR /opt/app
-COPY . .
+WORKDIR /app
+COPY ./gradlew ./
+COPY ./gradle ./gradle
+RUN ./gradlew --version --quiet
+COPY . ./
 EXPOSE 8080

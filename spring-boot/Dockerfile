@@ -1,8 +1,10 @@
 FROM adoptopenjdk:11.0.6_10-jdk-hotspot as build
 WORKDIR /project
-COPY build.gradle gradlew settings.gradle ./
+COPY gradlew ./
 COPY ./gradle ./gradle
-RUN ./gradlew --no-daemon getDeps
+RUN ./gradlew --version --quiet
+COPY build.gradle settings.gradle ./
+RUN ./gradlew --no-daemon --quiet getDeps
 COPY ./src ./src
 RUN ./gradlew --build-cache --no-daemon build
 
