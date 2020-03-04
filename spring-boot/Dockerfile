@@ -11,6 +11,6 @@ RUN ./gradlew --build-cache --no-daemon build
 FROM adoptopenjdk:11.0.6_10-jre-hotspot
 WORKDIR /app
 COPY --from=build /project/build/libs/app.jar .
-COPY ./launch.sh .
+COPY ./scripts ./scripts
 EXPOSE 8080
-ENTRYPOINT [ "/opt/app/launch.sh" ]
+ENTRYPOINT [ "/app/scripts/run_prod.sh" ]

@@ -16,14 +16,14 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.local
-    command: [ "./run_local.sh" ]
+    command: [ "./scripts/run_dev.sh" ]
     depends_on:
       - db
     env_file: .env_local
     ports: 
       - 8080:8080
     volumes:
-      - ./src:/opt/app/src
+      - ./src:/app/src
 
 volumes:
   db-data:
