@@ -15,4 +15,4 @@ COPY migrate.sh /app/migrate.sh
 COPY --from=build /project/build/libs/app.jar .
 COPY ./scripts ./scripts
 EXPOSE 8080
-ENTRYPOINT [ "/app/scripts/run_prod.sh" ]
+CMD [ "/app/scripts/run_prod.sh" ]
