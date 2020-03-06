@@ -28,7 +28,6 @@ services:
     # The default command that the container starts with. If you'd like to run
     # the project locally in Live configuration, you will need to change this.
     # See https://docs.divio.com/en/latest/how-to/local-in-live-mode.html.
-    #command: [ "/opt/java/openjdk/bin/java", "-jar", "-Dspring.profiles.active=default", "./app.jar" ]
     command: [ "./scripts/run_dev.sh" ]
     depends_on:
       - db
