@@ -9,8 +9,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String index(Model model) {
-        model.addAttribute("name", "World");
-        return "index";
+        return "/flavour-generated/index.html";
     }
 
 }
