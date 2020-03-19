@@ -9,7 +9,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String index(Model model) {
-        return "/flavour-generated/index.html";
+        return "index.html";
     }
 
 }
