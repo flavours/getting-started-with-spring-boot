@@ -19,7 +19,7 @@ Run `docker-compose up web` to start a dev-server with hot reloadling enabled.
 
 ### Info
 The container runs a Tomcat server listening on port 8080. The docker-compose.yml file is set up to
-expose this port to the docker host at port 8080 as well, but you are free to change it as you wish.
+expose this port to the docker host at port 8000, but you are free to change it as you wish.
 
 
 
