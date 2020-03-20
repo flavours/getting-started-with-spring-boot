@@ -1,6 +1,6 @@
 # Getting started with Java and Spring-boot
 
-![Actions](https://github.com/flavours/documentation/workflows/CI/badge.svg)
+![](https://github.com/flavours/documentation/workflows/CI/badge.svg)
 
 <p align="center">
   <img src="https://utils.flavours.dev/presskit/spring_boot_flavour_glossy.svg" width="100">
