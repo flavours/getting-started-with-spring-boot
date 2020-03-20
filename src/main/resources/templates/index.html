@@ -20,6 +20,7 @@
 </head>
 <body>
 <h1 id="getting-started-with-javaspring-boot">Getting started with Java/Spring-boot</h1>
+<p><img src="https://github.com/flavours/documentation/workflows/CI/badge.svg" alt="Actions" /> <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg" alt="GitHub license" /></a> <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" /></a></p>
 <figure>
 <img src="https://utils.flavours.dev/presskit/Icon%20Glossy.png" alt="" /><figcaption>flavour Spring-Boot Logo</figcaption>
 </figure>
@@ -37,9 +38,11 @@
 <h3 id="quick-start">Quick start</h3>
 <p>Run <code>docker-compose up web</code> to start a dev-server with hot reloadling enabled.</p>
 <h3 id="info">Info</h3>
-<p>The container runs a Tomcat server listening on port 8080. The docker-compose.yml file is set up to expose this port to the docker host at port 8080 as well, but you are free to change it as you wish.</p>
-<h2 id="prepare-a-new-release-of-the-getting-started-project">Prepare a new release of the getting-started project</h2>
-<p>To create a new release of the getting started project, you have to updated the default welcome screen with the latest version.</p>
+<p>The container runs a Tomcat server listening on port 8080. The docker-compose.yml file is set up to expose this port to the docker host at port 8000, but you are free to change it as you wish.</p>
+<h2 id="getting-started-project-development">Getting-started project development</h2>
+<p>If you want to contribute to this project, please checkout github for our <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/CONTRIBUTING.md">contribution guide</a> and <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<h3 id="how-to-prepare-a-new-release-of-the-getting-started-project">How to prepare a new release of the getting-started project</h3>
+<p>To create a new release of the getting started project, you have to updated the default welcome screen with the latest version. Please also update the changelog accordingly and tag a new release in github.</p>
 <pre><code>docker run --rm --volume &quot;`pwd`:/data&quot; --user `id -u`:`id -g` pandoc/core:2.9.2 -s --css https://utils.flavours.dev/baseproject/1.0/style.css -o /data/src/main/resources/templates/index.html /data/README.md</code></pre>
 </body>
 </html>
