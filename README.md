@@ -1,11 +1,9 @@
 # Getting started with Java and Spring-boot
 
 ![Actions](https://github.com/flavours/documentation/workflows/CI/badge.svg)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/flavours/getting-started-with-spring-boot/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
 <p align="center">
-  <img src="https://utils.flavours.dev/presskit/Icon%20Glossy.svg" width="100">
+  <img src="https://utils.flavours.dev/presskit/spring_boot_flavour_glossy.svg" width="100">
 </p>
 
 ## Project Outline
