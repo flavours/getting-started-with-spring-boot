@@ -1,7 +1,6 @@
 # Getting started with Java/Spring-boot
 
-[![Actions](https://github.com/flavours/documentation/workflows/CI/badge.svg)]
-
+![Actions](https://github.com/flavours/documentation/workflows/CI/badge.svg)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/flavours/getting-started-with-spring-boot/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
