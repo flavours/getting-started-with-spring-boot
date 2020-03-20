@@ -30,8 +30,13 @@ expose this port to the docker host at port 8000, but you are free to change it 
 
 
 
-## Prepare a new release of the getting-started project
-To create a new release of the getting started project, you have to updated the default welcome screen with the latest version. 
+## Getting-started project development
+
+If you want to contribute to this project, please checkout github for our [contribution guide](https://github.com/flavours/getting-started-with-spring-boot/blob/master/CONTRIBUTING.md) and [code of conduct](https://github.com/flavours/getting-started-with-spring-boot/blob/master/CODE_OF_CONDUCT.md).
+
+### How to prepare a new release of the getting-started project
+
+To create a new release of the getting started project, you have to updated the default welcome screen with the latest version. Please also update the changelog accordingly and tag a new release in github.
 
 ```
 docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/core:2.9.2 -s --css https://utils.flavours.dev/baseproject/1.0/style.css -o /data/src/main/resources/templates/index.html /data/README.md
