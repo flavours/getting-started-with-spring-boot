@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/flavours/getting-started-with-spring-boot/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
-![flavour Spring-Boot Logo](https://utils.flavours.dev/presskit/Icon%20Glossy.png)
+<img src="https://utils.flavours.dev/presskit/Icon%20Glossy.svg" width="100" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 
