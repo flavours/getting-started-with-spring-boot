@@ -1,44 +1,48 @@
-# Contributing
+# How to contribute to the project
 
-Here's help on how to make contributions, divided into the following sections:
+Thanks for contributing, welcome aboard.
 
-* general information,
-* pull requests and different branches recommended
-* no trailing whitespace
+Please see our [CODE OF CONDUCT](./CODE_OF_CONDUCT.md) for our code of conduct.
 
-## General information
 
-For specific proposals, please provide them as
+## Submitting proposals
+
+Please provide proposals as
 [pull requests](https://github.com/flavours/getting-started-with-spring-boot/pulls)
 or
-[issues](https://github.com/flavours/getting-started-with-spring-boot/issues)
-
-You are welcome aboard!
-
-See [CODE OF CONDUCT](./CODE_OF_CONDUCT.md) for our code of conduct;
-in short, "Be excellent to each other".
+[issues](https://github.com/flavours/getting-started-with-spring-boot/issues) as appropriate.
 
 
-## Pull requests and different branches recommended
+## Pull requests and branches
 
-Pull requests are preferred, since they are specific.
-For more about how to create a pull request, see
-<https://help.github.com/articles/using-pull-requests/>.
+Please make pull requests:
 
-We recommend creating different branches for different (logical)
-changes, and creating a pull request when you're done into the master branch.
-See the GitHub documentation on
-[creating branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
-and
-[using pull requests](https://help.github.com/articles/using-pull-requests/).
+* from an appropriately-named new branch
+* to the ``master`` branch
 
+See: 
 
-### No trailing whitespace
-
-Please do not use or include trailing whitespace
-(spaces or tabs at the end of a line).
-Since they are often not visible, they can cause silent problems
-and misleading unexpected changes.
-For example, some editors (e.g., Atom) quietly delete them by default.
+* [how to make pull requests](https://help.github.com/articles/using-pull-requests/)
+* [how to manage branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
 
 
+### Whitespace
+
+Do not use trailing whitespace (spaces or tabs at the end of a line). They are often not visible, and can cause silent 
+problems and misleading unexpected changes. For example, some editors quietly delete them by default.
+
+
+### Prepare a new release of the getting-started project
+
+* Update the default welcome screen - i.e. the ``README`` - with the latest version. Run:
+
+  ```
+  docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/core:2.9.2 -s --css https://utils.flavours.dev/baseproject/1.0/style.css --metadata pagetitle="Spring Boot Flavour" -o /data/src/main/resources/templates/index.html /data/README.md
+  ```
+
+  This uses the ``README.md`` file to populate the project's ``index.html`` - both files should be committed.
+
+* Update the [CHANGELOG](https://github.com/flavours/getting-started-with-spring-boot/blob/master/CHANGELOG.md. Follow 
+  the format of existing entries.
+
+* Tag the new release on GitHub.
