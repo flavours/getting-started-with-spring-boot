@@ -1,4 +1,8 @@
 FROM adoptopenjdk:11.0.6_10-jdk-hotspot
+
+RUN echo "#!/bin/sh" > /usr/local/bin/start && chmod +x /usr/local/bin/start
+COPY migrate.sh /app/migrate.sh
+
 WORKDIR /app
 COPY ./gradlew ./
 COPY ./gradle ./gradle
