@@ -2,11 +2,11 @@ FROM adoptopenjdk:11.0.6_10-jdk-hotspot as build
 WORKDIR /project
 COPY gradlew ./
 COPY ./gradle ./gradle
-RUN ./gradlew --version --quiet
-COPY build.gradle settings.gradle ./
-RUN ./gradlew --no-daemon --quiet getDeps
+RUN ./gradlew --no-daemon --version --quiet # Download gradle binaries
+COPY build.gradle settings.gradle app.flavour* ./
+RUN ./gradlew --no-daemon --quiet build # Download project dependencies
 COPY ./src ./src
-RUN ./gradlew --build-cache --no-daemon build
+RUN ./gradlew --no-daemon --quiet build
 
 FROM adoptopenjdk:11.0.6_10-jre-hotspot
 WORKDIR /app

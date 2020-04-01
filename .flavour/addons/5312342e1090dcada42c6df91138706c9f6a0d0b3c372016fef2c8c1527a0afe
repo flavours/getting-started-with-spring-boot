@@ -1,0 +1,64 @@
+---
+install:
+  package: "com.amazonaws:aws-java-sdk-s3:1.11.755"
+config:
+  languages:
+    label: "Languages"
+    required: true
+    helpText: "WARNING: this field is auto-written. Please do not change it here."
+    default: "en,de"
+    type: "scalar/string"
+    helptext: "WARNING: this field is auto-written. Please do not change it here."
+    min: null
+  use_manifeststaticfilesstorage:
+    label: "Hash static file names"
+    required: false
+    helpText: "Use ManifestStaticFilesStorage to manage static files and set far-expiry\
+      \ headers. Enabling this option disables autosync for static files, and can\
+      \ cause deployment and/or 500 errors if a referenced file is missing. Please\
+      \ ensure that your test server works with this option enabled before deploying\
+      \ it to the live site.'\n"
+    default: "False"
+    type: "scalar/boolean"
+    helptext: "Use ManifestStaticFilesStorage to manage static files and set far-expiry\
+      \ headers. Enabling this option disables autosync for static files, and can\
+      \ cause deployment and/or 500 errors if a referenced file is missing. Please\
+      \ ensure that your test server works with this option enabled before deploying\
+      \ it to the live site.'\n"
+    min: null
+  enable_gis:
+    label: "Enable django.contrib.gis"
+    required: false
+    helpText: "Enable Geodjango (django.contrib.gis) related functionality.\\n WARNING:\
+      \ Requires postgis (contact support to enable it for your project). For local\
+      \ development change \"postgres:9.4\" to \"mdillon/postgis:9.4\" in docker-compose.yml\
+      \ and run \"aldryn project up\" to re-create the db container.\n"
+    default: "False"
+    type: "scalar/boolean"
+    helptext: "Enable Geodjango (django.contrib.gis) related functionality.\\n WARNING:\
+      \ Requires postgis (contact support to enable it for your project). For local\
+      \ development change \"postgres:9.4\" to \"mdillon/postgis:9.4\" in docker-compose.yml\
+      \ and run \"aldryn project up\" to re-create the db container.\n"
+    min: null
+  disable_default_language_prefix:
+    label: "Remove URL language prefix for default language"
+    required: false
+    helpText: "For example, http://example.com/ rather than http://example.com/en/\
+      \ if en (English) is the default language.\n"
+    default: "False"
+    type: "scalar/boolean"
+    helptext: "For example, http://example.com/ rather than http://example.com/en/\
+      \ if en (English) is the default language.\n"
+    min: null
+  session_timeout:
+    label: "Timeout for users session, in seconds."
+    required: false
+    helpText: "By default it's two weeks (Django default)."
+    default: "1209600"
+    type: "scalar/integer"
+    helptext: "By default it's two weeks (Django default)."
+    min: 1
+meta:
+  version: "0.1"
+  name: "django-divio"
+spec: "0.1"
