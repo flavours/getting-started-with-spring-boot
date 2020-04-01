@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'com.github.megri:fam-gradle-plugin:master-SNAPSHOT'
@@ -45,11 +46,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-task getDeps(type: Exec) {
-    configurations.testRuntime.files
-    commandLine 'echo', 'Downloaded all dependencies'
 }
 
 apply plugin: 'com.divio.fam.gradle.plugin'
