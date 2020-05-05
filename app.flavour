@@ -4,6 +4,6 @@ meta:
   name: "my-project"
 spec: "0.1"
 addons:
-  com.amazonaws:aws-java-sdk-s3:1.11.755:
+  java/com.amazon/aws-s3:1.11.755:
     manager: "flavour/fam-gradle:0.1"
     hash: "5312342e1090dcada42c6df91138706c9f6a0d0b3c372016fef2c8c1527a0afe"
