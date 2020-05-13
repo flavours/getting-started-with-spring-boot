@@ -1,14 +1,5 @@
-buildscript {
-    repositories {
-        maven { url 'https://jitpack.io' }
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath 'com.github.flavours:fam-gradle-plugin:master-SNAPSHOT'
-    }
-}
-
 plugins {
+    id 'com.divio.fam.gradle.plugin' version '0.1'
     id 'org.springframework.boot' version '2.2.5.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
@@ -48,4 +39,3 @@ test {
     useJUnitPlatform()
 }
 
-apply plugin: 'com.divio.fam.gradle.plugin'
