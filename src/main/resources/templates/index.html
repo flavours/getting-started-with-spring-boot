@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Spring Boot Flavour</title>
+  <title>README</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20,32 +20,72 @@
 </head>
 <body>
 <h1 id="getting-started-with-java-and-spring-boot">Getting started with Java and Spring-boot</h1>
-<figure>
-<img src="https://github.com/flavours/documentation/workflows/CI/badge.svg" alt="" /><figcaption>Actions</figcaption>
-</figure>
+<p><img src="https://github.com/flavours/documentation/workflows/CI/badge.svg" /></p>
 <p align="center">
 <img src="https://utils.flavours.dev/presskit/spring_boot_flavour_glossy.svg" width="100">
 </p>
-<h2 id="project-outline">Project Outline</h2>
-<p>This project template utilizes</p>
-<ul>
-<li>Java 11</li>
-<li><a href="https://flywaydb.org/">FlywayDB</a> for database migrations;</li>
-<li><a href="https://gradle.org/">Gradle</a> to build and, in dev-mode, run the application with hot reload;</li>
-<li><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Spring JPA</a> for database access;</li>
-<li><a href="https://spring.io/guides/gs/serving-web-content/">Spring Web</a> to serve HTTP requests;</li>
-<li><a href="https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html">Thymeleaf</a> for HTML-templating;</li>
-</ul>
-<h2 id="local-development">Local development</h2>
-<h3 id="quick-start">Quick start</h3>
-<p>Run <code>docker-compose up web</code> to start a dev-server with hot reloadling enabled.</p>
-<h3 id="info">Info</h3>
-<p>The container runs a Tomcat server listening on port 8080. The docker-compose.yml file is set up to expose this port to the docker host at port 8000, but you are free to change it as you wish.</p>
-<h2 id="getting-started-project-development">Getting-started project development</h2>
-<p>If you want to contribute to this project, please checkout github for our <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/CONTRIBUTING.md">contribution guide</a> and <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<p>A <a href="https://www.flavours.dev">Flavours</a> project template for Java/Spring Boot</p>
+<h2 id="quick-start">Quick start</h2>
+<h3 id="clone-the-repository">Clone the repository</h3>
+<pre><code>git clone git@github.com:flavours/getting-started-with-spring-boot.git</code></pre>
+<h3 id="build-the-project">Build the project</h3>
+<pre><code>cd getting-started-with-spring-boot
+docker-compose build</code></pre>
+<p>The project includes a <code>web</code> service, running the Java code, and a <code>db</code> service, running a Postgres database. See the <code>docker-compose.yml</code> file for details.</p>
+<h3 id="run-the-project">Run the project</h3>
+<pre><code>docker-compose up</code></pre>
+<p>Containers for both services will be launched. The project can be reached at http://localhost:8000.</p>
+<p>Hot-reloading is enabled (i.e. changes to the Java code in the project will cause the application to restart so that they can be used.)</p>
+<h2 id="how-to">How to</h2>
+<h3 id="run-the-local-project-on-a-different-port">Run the local project on a different port</h3>
+<p>The container runs a Tomcat server listening on port 8080. The <code>docker-compose.yml</code> file is set up to expose this port to the Docker host at port 8000, but you are free to change it as you wish - edit the <code>ports</code> directive:</p>
+<pre><code>services:
+  web:
+    [...]
+    ports: 
+      - 8000:8080</code></pre>
+<h3 id="contribute-to-the-project">Contribute to the project</h3>
+<p>See the <a href="https://github.com/flavours/getting-started-with-spring-boot/blob/master/CONTRIBUTING.md">contribution guide</a>.</p>
 <h3 id="how-to-prepare-a-new-release-of-the-getting-started-project">How to prepare a new release of the getting-started project</h3>
 <p>To create a new release of the getting started project, you have to updated the default welcome screen with the latest version.</p>
 <pre><code>docker run --rm --volume &quot;`pwd`:/data&quot; --user `id -u`:`id -g` pandoc/core:2.9.2 -s --css https://utils.flavours.dev/baseproject/1.0/style.css -o /data/src/main/resources/templates/index.html /data/README.md</code></pre>
 <p>Please also update the changelog accordingly and tag a new release in github.</p>
+<h3 id="external-how-to-guides">External how-to guides</h3>
+<ul>
+<li><a href="https://spring.io/guides/gs/handling-form-submission/">Handling Form Submission</a></li>
+<li><a href="https://spring.io/guides/gs/relational-data-access/">Accessing Relational Data using JDBC with Spring</a></li>
+<li><a href="https://spring.io/guides/gs/managing-transactions/">Managing Transactions</a></li>
+<li><a href="https://spring.io/guides/gs/accessing-data-mysql/">Accessing data with MySQL</a></li>
+<li><a href="https://spring.io/guides/gs/accessing-data-jpa/">Accessing Data with JPA</a></li>
+<li><a href="https://spring.io/guides/gs/securing-web/">Securing a Web Application</a></li>
+<li><a href="https://spring.io/guides/tutorials/spring-boot-oauth2/">Spring Boot and OAuth2</a></li>
+<li><a href="https://spring.io/guides/gs/authenticating-ldap/">Authenticating a User with LDAP</a></li>
+<li><a href="https://spring.io/guides/gs/rest-service/">Building a RESTful Web Service</a></li>
+<li><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></li>
+<li><a href="https://spring.io/guides/tutorials/bookmarks/">Building REST services with Spring</a></li>
+</ul>
+<h2 id="reference">Reference</h2>
+<p>This project template uses:</p>
+<ul>
+<li>Java 11</li>
+<li><a href="https://flywaydb.org/">FlywayDB</a> for database migrations</li>
+<li><a href="https://gradle.org/">Gradle</a> to build and, in dev-mode, run the application with hot reload</li>
+<li><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Spring JPA</a> for database access</li>
+<li><a href="https://spring.io/guides/gs/serving-web-content/">Spring Web</a> to serve HTTP requests</li>
+<li><a href="https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html">Thymeleaf</a> for HTML-templating</li>
+</ul>
+<h3 id="external-reference">External reference</h3>
+<ul>
+<li><a href="https://docs.gradle.org">Official Gradle documentation</a></li>
+<li><a href="https://scans.gradle.com#gradle">Gradle Build Scans – insights for your project’s build</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/gradle-plugin/reference/html/">Spring Boot Gradle Plugin Reference Guide</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#using-boot-devtools">Spring Boot DevTools</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-spring-mvc-template-engines">Thymeleaf</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-sql">JDBC API</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup">Flyway Migration</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data">Spring Data JPA</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-security">Spring Security</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications">Spring Web</a></li>
+</ul>
 </body>
 </html>

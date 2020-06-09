@@ -59,6 +59,16 @@ services:
 See the [contribution guide](https://github.com/flavours/getting-started-with-spring-boot/blob/master/CONTRIBUTING.md).
 
 
+### How to prepare a new release of the getting-started project###
+To create a new release of the getting started project, you have to updated the default welcome screen with the latest version.
+
+```
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/core:2.9.2 -s --css https://utils.flavours.dev/baseproject/1.0/style.css -o /data/src/main/resources/templates/index.html /data/README.md
+```
+
+Please also update the changelog accordingly and tag a new release in github.
+
+
 ### External how-to guides
 
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
