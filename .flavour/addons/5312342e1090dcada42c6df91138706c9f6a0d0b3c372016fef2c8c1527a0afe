@@ -1,0 +1,7 @@
+---
+install:
+  package: "com.amazonaws:aws-java-sdk-s3:1.11.755"
+meta:
+  version: "1.11.755"
+  name: "java/com.amazon/aws-s3"
+spec: "0.1"
