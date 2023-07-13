@@ -17,4 +17,5 @@ COPY migrate.sh /app/migrate.sh
 COPY --from=build /project/build/libs/app.jar .
 COPY ./scripts ./scripts
 EXPOSE 8080
+RUN chmod 777 /app/scripts/run_prod.sh
 CMD [ "/app/scripts/run_prod.sh" ]
