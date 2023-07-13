@@ -2,7 +2,7 @@ FROM adoptopenjdk:11.0.6_10-jdk-hotspot as build
 WORKDIR /project
 COPY gradlew ./
 COPY ./gradle ./gradle
-RUN chmod 700 ./gradle
+RUN chmod 777 ./gradlew
 RUN ./gradlew --no-daemon --version --quiet # Download gradle binaries
 COPY build.gradle settings.gradle app.flavour* ./
 # RUN ./gradlew --no-daemon --quiet resolveDependencies # TODO
